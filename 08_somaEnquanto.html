@@ -5,11 +5,16 @@
     */
     
     //ENTRADA
+    let insiraNumero = Number(prompt(`Informe um número: (sabendo que ao digitar o número 0 a soma para)`));
+    let soma = 0;
 
-
-    //PROCESSAMENTO
-
+    //PROCESSAMENTO WHILE
+    while(insiraNumero !== 0){
+        soma = soma + insiraNumero;
+        insiraNumero = Number(prompt(`Informe um número: (sabendo que ao digitar o número 0 a soma para)`));
+    }
 
     //SAÍDA
-    
+    document.write(` O total é: ${soma}`);
+    //
 </script>

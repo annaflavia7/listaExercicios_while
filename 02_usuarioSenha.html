@@ -1,4 +1,4 @@
-<meta charset="UTF-8">
+meta charset="UTF-8">
 <script>
     /*
     PROBLEMA: VALIDAR USUÁRIO E SENHA
@@ -6,11 +6,16 @@
     */
 
     //ENTRADA
-
+    let usuario = prompt(`Informe o seu usuario`);
+    let senha = prompt(`informe sua senha`);
 
     //PROCESSAMENTO
-
-
+    while (usuario == senha ) {
+        alert(`O usuário não pode ser igual a senha! Informe novo usuário e senha`);
+        usuario = prompt(`Informe o seu usuario`);
+        senha = prompt(`informe sua senha`);
+    }
+    
     //SAÍDA
-
+  alert(`usuario e senha criada com sucesso`);
 </script>

@@ -6,11 +6,22 @@
     */
 
     //ENTRADA
+    let informaSenha = "";
+    let senhaCorreta = "1234";
 
-
-    //PROCESSAMENTO
-
+    //PROCESSAMENTO WHILE
+    do{
+        informaSenha = prompt(`Informe uma senha de 4 números inteiros:`);
+        if(informaSenha == senhaCorreta){
+            alert(`Senha Correta`)  
+        }else if(informaSenha.length !== 4){
+            alert(`Informe uma senha com quatro números inteiros!`);
+        }else{
+            alert(`Senha Incorreta!`);
+        }
+    }while(informaSenha !== senhaCorreta);
 
     //SAÍDA
-
+    document.write(`Senha: ${informaSenha}<br> Válida!`);
+    //
 </script>

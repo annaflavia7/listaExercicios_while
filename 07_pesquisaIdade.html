@@ -13,11 +13,44 @@
     */
 
     //ENTRADA
-
+    let salarios = 0;
+    let maiorIdade = -1;
+    let menorIdade = 1000;
+    let mulheres = 0;
+    let salarioMenor = 9999;
+    let salarioMenorIdade = 0;
+    let menorSalarioSexo = "";
+    let totalPessoas = 0;
 
     //PROCESSAMENTO
+    while(true){
+        let idade = parseInt(prompt(`Digite aqui sua idade: (a entrada de dados e encerrada ao digitar uma idade negativa)`));
+        if(idade < 0){
+            break;
+        }
+        let sexo = prompt(`Digite seu sexo (M/F):`).toUpperCase();
+        let salario = parseFloat(prompt(`Digite aqui seu salário:`));
+        salarios += salario;
 
+        if(idade > maiorIdade){
+            maiorIdade = idade;
+        }
+        if(idade < menorIdade){
+            menorIdade = idade;
+        }
+        if(sexo == "F"){
+            mulheres++;
+        }
+        if(salario < salarioMenor){
+            salarioMenor = salario;
+            salarioMenorIdade = idade;
+            menorSalarioSexo = sexo;
+        }
+        totalPessoas++;
+    }
+    let salariosMedia = salarios / totalPessoas;
 
     //SAÍDA
-
+    document.write(`Média Salários: ${salariosMedia.toFixed(2).replace(".",",")} <br> Maior Idade: ${maiorIdade}. <br> Menor Idade: ${menorIdade}. <br> Quantidade de mulheres: ${mulheres} <br> Idade e sexo da pessoa com menor idade: ${salarioMenorIdade}, ${menorSalarioSexo}`);
+    //
 </script>

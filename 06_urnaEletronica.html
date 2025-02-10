@@ -20,11 +20,49 @@
     */
 
     //ENTRADA
-
+    let contaJoaozinho = 0;
+    let contaMariazinha = 0;
+    let contaNulos = 0;
+    let contaBrancos = 0;
+    let contaTotal = 0;
 
     //PROCESSAMENTO
+    while(true){
+        let votos = parseInt(prompt(`Escolha uma das opções abaixo:
+        1- Joãozinho
+        2- Mariazinha
+        3- Nulo
+        4- Branco
+        0- encerrar votação`));
+        if(votos == 1){
+            contaJoaozinho++;
+        }else if(votos == 2){
+            contaMariazinha++;
+        }else if(votos == 3){
+            contaNulos++
+        }else if(votos == 4){
+            contaBrancos++;
+        }else if(votos == 0){
+            break;
+        }else{
+            alert(`Número Inválido!`);
+            continue;
+        }
+        contaTotal++;
+    }
+    let totalBrancos = (contaBrancos / contaTotal) * 100;
+    let totalNulos = (contaNulos / contaTotal) * 100;
 
+    let maisVotado = "";
+    if(contaJoaozinho > contaMariazinha) {
+        maisVotado = "Joãozinho";
+    }else if(contaMariazinha > contaJoaozinho){
+        maisVotado = "Mariazinha";
+    }else{
+        maisVotado = "Teremos segundo turno, pois ambos tiveram a mesma quantidade de votos!"
+    }
 
     //SAÍDA
-
+    document.write(`Confira o resultado da eleição: <br> Candidato Joãozinho: ${contaJoaozinho} votos <br> Candidata Mariazinha: ${contaMariazinha} votos <br> Votos Nulos: ${totalNulos.toFixed(2)}% <br> Votos em Branco: ${totalBrancos.toFixed(2)}% <br> Candidato Vencedor: ${maisVotado}!!!`);
+    //
 </script>

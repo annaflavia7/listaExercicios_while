@@ -1,3 +1,4 @@
+
 <meta charset="UTF-8">
 <script>
     /*
@@ -6,11 +7,19 @@
     */
 
     //ENTRADA
+    let anos = 0;
+    let a = 80000;
+    let b = 200000;
+    const taxaA = 0.03;
+    const taxaB = 0.015;
 
-
-    //PROCESSAMENTO
-
-
+    //PROCESSAMENTO WHILE 
+    while(a <= b){
+        a = a + (a*taxaA);
+        b = b + (b*taxaB);
+        anos++
+    }
     //SAÍDA
-
+    document.write(`Serão necessários ${anos} anos, para que a população A ultrapasse ou iguale a população B!`);
+    //
 </script>

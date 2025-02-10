@@ -5,11 +5,17 @@
     */
 
     //ENTRADA
+    let quantFibonacci = Number(prompt(`Quantos números da sequência de Fibonacci deseja obter?`));
+    let somaTudo = 0;
+    let anterior = 0;
+    let novo = 1;
 
-
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-    
+    //PROCESSAMENTO WHILE 
+    while(somaTudo < quantFibonacci){
+        document.write(anterior + "");
+        anterior = anterior + novo;
+        novo = anterior - novo;
+        somaTudo++; 
+    }
+    //
 </script>
